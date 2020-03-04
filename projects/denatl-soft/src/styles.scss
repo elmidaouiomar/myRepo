@@ -1,0 +1,58 @@
+@import 'styles-variables';
+
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+@import 'styles-reset';
+
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+@import './themes/default-theme';
+@import './themes/light-theme';
+@import './themes/black-theme';
+@import './themes/nature-theme';
+
+@import 'styles-reset.scss-theme';
+@import './app/app/app.component.scss-theme';
+@import './app/shared/big-input/big-input/big-input.component.scss-theme';
+@import './app/features/about/about/about.component.scss-theme';
+@import './app/features/examples/notifications/components/notifications.component.scss-theme';
+@import './app/features/examples/todos/components/todos-container.component.scss-theme';
+@import './app/features/examples/stock-market/components/stock-market-container.component.scss-theme';
+@import './app/features/examples/theming/parent/parent.component.scss-theme';
+@import './app/features/examples/theming/child/child.component.scss-theme';
+@import './app/features/examples/examples/examples.component.scss-theme';
+
+@mixin custom-components-theme($theme) {
+  @include dts-styles-reset-theme($theme);
+  @include dts-app-component-theme($theme);
+  @include dts-about-component-theme($theme);
+  @include dts-big-input-component-theme($theme);
+  @include dts-notifications-component-theme($theme);
+  @include dts-todos-container-component-theme($theme);
+  @include dts-stock-market-container-component-theme($theme);
+  @include dts-parent-component-theme($theme);
+  @include dts-child-component-theme($theme);
+  @include dts-examples-component-theme($theme);
+}
+
+.default-theme {
+  @include angular-material-theme($dts-theme);
+  @include custom-components-theme($dts-theme);
+}
+
+.light-theme {
+  @include angular-material-theme($dts-light-theme);
+  @include custom-components-theme($dts-light-theme);
+}
+
+.black-theme {
+  @include angular-material-theme($dts-black-theme);
+  @include custom-components-theme($dts-black-theme);
+}
+
+.nature-theme {
+  @include angular-material-theme($dts-nature-theme);
+  @include custom-components-theme($dts-nature-theme);
+}

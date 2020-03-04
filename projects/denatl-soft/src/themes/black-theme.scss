@@ -1,0 +1,9 @@
+$dts-black-primary: mat-palette($mat-grey, 700, 300, 900);
+$dts-black-accent: mat-palette($mat-blue-grey, 400);
+$dts-black-warn: mat-palette($mat-red, 500);
+
+$dts-black-theme: mat-dark-theme(
+  $dts-black-primary,
+  $dts-black-accent,
+  $dts-black-warn
+);

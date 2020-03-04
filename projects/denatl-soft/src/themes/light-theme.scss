@@ -1,0 +1,9 @@
+$dts-light-primary: mat-palette($mat-grey, 200, 500, 300);
+$dts-light-accent: mat-palette($mat-brown, 200);
+$dts-light-warn: mat-palette($mat-deep-orange, 200);
+
+$dts-light-theme: mat-light-theme(
+  $dts-light-primary,
+  $dts-light-accent,
+  $dts-light-warn
+);

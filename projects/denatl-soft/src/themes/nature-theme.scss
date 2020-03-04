@@ -1,0 +1,9 @@
+$dts-nature-primary: mat-palette($mat-brown, 700, 300, 900);
+$dts-nature-accent: mat-palette($mat-deep-purple, 300);
+$dts-nature-warn: mat-palette($mat-red, 600);
+
+$dts-nature-theme: mat-light-theme(
+  $dts-nature-primary,
+  $dts-nature-accent,
+  $dts-nature-warn
+);
